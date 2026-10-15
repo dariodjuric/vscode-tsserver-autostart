@@ -1,0 +1,6 @@
+control/
+test/
+.vscode-test/
+.gitignore
+make-release.sh
+*.vsix

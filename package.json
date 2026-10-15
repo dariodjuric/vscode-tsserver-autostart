@@ -1,0 +1,53 @@
+{
+  "name": "tsserver-autostart",
+  "displayName": "TS Server Autostart",
+  "description": "Starts the TypeScript server when a TypeScript workspace opens, so workspace symbol search works before you open a file.",
+  "categories": [
+    "Programming Languages",
+    "Other"
+  ],
+  "keywords": [
+    "typescript",
+    "javascript",
+    "tsserver",
+    "tsgo",
+    "workspace symbols",
+    "startup"
+  ],
+  "version": "0.0.1",
+  "publisher": "dariodjuric",
+  "license": "MIT",
+  "icon": "images/icon.png",
+  "galleryBanner": {
+    "color": "#1A76CE",
+    "theme": "dark"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dariodjuric/vscode-tsserver-autostart"
+  },
+  "bugs": {
+    "url": "https://github.com/dariodjuric/vscode-tsserver-autostart/issues"
+  },
+  "homepage": "https://github.com/dariodjuric/vscode-tsserver-autostart#readme",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "main": "./extension.js",
+  "activationEvents": [
+    "workspaceContains:tsconfig.json",
+    "workspaceContains:jsconfig.json"
+  ],
+  "contributes": {
+    "configuration": {
+      "title": "TS Server Autostart",
+      "properties": {
+        "tsserverAutostart.file": {
+          "type": "string",
+          "default": "",
+          "description": "Path of the file to open, relative to the workspace folder. If empty, the extension uses the first TypeScript file that it finds."
+        }
+      }
+    }
+  }
+}
